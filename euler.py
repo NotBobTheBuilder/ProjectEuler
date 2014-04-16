@@ -151,3 +151,16 @@ def p8():
             yield reduce(mul, (int(n) for n in bignum[i:i+5]))
 
     return max(products())
+
+def p9():
+    """
+    Find a*b*c where a+b+c == 1000 and a**2 + b**2 == c**2
+    https://projecteuler.net/problem=9
+
+    """
+    for c in range(1, 1000):
+        for b in range(1, c):
+            for a in range(1, b):
+                if a+b+c == 1000:
+                    if a*a + b*b == c*c:
+                        return a*b*c
