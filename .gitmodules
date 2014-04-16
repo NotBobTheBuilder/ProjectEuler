@@ -1,0 +1,3 @@
+[submodule "primes"]
+	path = primes
+	url = https://github.com/NotBobTheBuilder/python-primes

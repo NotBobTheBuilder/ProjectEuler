@@ -95,3 +95,19 @@ def p6():
     sqsum = sum(range(101))**2
 
     return sqsum - sumsq
+
+def p7():
+    """
+    Print the 10001st Prime number
+    https://projecteuler.net/problem=7
+
+    """
+
+    from primes import Primes
+
+    primes = iter(Primes())
+
+    for i in range(10000):
+        next(primes)
+
+    return next(primes)
