@@ -164,3 +164,10 @@ def p9():
                 if a+b+c == 1000:
                     if a*a + b*b == c*c:
                         return a*b*c
+
+def p10():
+    """
+    Sum the primes up to 2,000,000
+    """
+    from primes import Primes
+    return sum(Primes(2000000))
