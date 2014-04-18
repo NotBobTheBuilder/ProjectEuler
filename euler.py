@@ -116,7 +116,7 @@ def p8():
     """
     [Python 3 only - had trouble with reduce I couldn't fix cleanly]
     Print the largest product of 5 consecutive numbers in the string
-    https://rojecteuler.net/problem=8
+    https://projecteuler.net/problem=8
 
     """
 
@@ -168,6 +168,8 @@ def p9():
 def p10():
     """
     Sum the primes up to 2,000,000
+    https://projecteuler.net/problem=10
+
     """
     from primes import Primes
     return sum(Primes(2000000))
