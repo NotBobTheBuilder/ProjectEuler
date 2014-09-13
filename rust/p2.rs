@@ -27,9 +27,8 @@ fn main() {
     let mut total = 0;
 
     for n in fib.take_while(|&n| n <= 4000000) {
-        match n {
-            n if n % 2 == 0 => total += n,
-            _ => { /* do nothing */ }
+        if n % 2 == 0 {
+            total +=n;
         }
     }
 
