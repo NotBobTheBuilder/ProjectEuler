@@ -7,6 +7,7 @@
 extern crate num;
 
 use std::mem;
+use std::iter::AdditiveIterator;
 
 struct Fib {
     a: int,
@@ -24,13 +25,7 @@ impl Iterator<int> for Fib {
 
 fn main() {
     let fib = Fib {a: 1i, b: 2i};
-    let mut total = 0;
-
-    for n in fib.take_while(|&n| n <= 4000000) {
-        if n % 2 == 0 {
-            total +=n;
-        }
-    }
+    let total = fib.take_while(|&n| n <= 4000000).filter(|n| n % 2 == 0).sum();
 
     println!("Result: {}", total);
 }
